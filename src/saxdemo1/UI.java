@@ -67,7 +67,7 @@ public class UI extends javax.swing.JFrame {
         clearData();
         
         for (contact o : list) {
-           if(o.getClass().getDeclaredField("first_name").get(o).toString().contains(searchValue)){
+           if(o.getClass().getDeclaredField(searchkey).get(o).toString().contains(searchValue)){
                        model.addRow(new Object[]{o.getFirst_name(), o.getLast_name(), o.getCompany_name(),o.getAddress(),o.getCity(),o.getCounty(),o.getState(),o.getZip(),o.getPhone(),o.getEmail()});
                    }
         }
